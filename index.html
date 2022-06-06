@@ -10,27 +10,34 @@
 
 <body>
     <h1>Assignment 2</h1>
-
-
+    <table>
+        <tr>
+            <th>Year</th>
+        </tr>
+    </table>
+    <p></p>
 
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="app2.js" defer></script>
+    <script src = "app2.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         var data = {
             resource_id: '83c21090-bd19-4b54-ab6b-d999c251edcf', // the resource id
-            limit: 5, // get 5 results
-            q: 'jones' // query for 'jones'
         };
         $.ajax({
             url: 'https://data.gov.sg/api/action/datastore_search',
             data: data,
-            dataType: 'jsonp',
+            dataType: 'json',
             success: function (data) {
-                alert('Total results found: ' + data.result.total)
+                console.log(data.result.records)
+                //alert('Total results found: ' + data.result.total)
+                getResponse(data.result.records);
             }
         });
+        function getResponse(data){
+            
+        }
     </script>
 </body>
 
