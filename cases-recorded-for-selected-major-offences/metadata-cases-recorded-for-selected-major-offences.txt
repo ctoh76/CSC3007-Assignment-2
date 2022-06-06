@@ -1,0 +1,54 @@
+# Metadata for Cases Recorded for Selected Major Offences
+---
+Identifier: '2d1b1781-b4f8-45c9-8679-bc9150ce1804'
+Name: 'cases-recorded-for-selected-major-offences'
+Title: 'Cases Recorded for Selected Major Offences'
+Description: 'Note: Figures are based on Annual Statistical Reports on Crime in Singapore.'
+Topics:
+  - 'Society'
+Keywords:
+  - 'crime'
+Publisher:
+  Name: 'Ministry of Home Affairs - Singapore Police Force'
+  Admin 1:
+    Name: 'Ng Kok Hoe'
+    Department: 'Police Intelligence Department \ Intelligence Processing Division'
+    Email: 'NG_Kok_Hoe@spf.gov.sg'
+Sources:
+  - 'Ministry of Home Affairs - Singapore Police Force'
+Source Url: 'https://www.tablebuilder.singstat.gov.sg/publicfacing/createDataTable.action?refId=15648&exportType=csv'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '2011-01-01 to 2020-12-31'
+Last Updated: '2021-03-05T17:14:28.751384'
+Resources:
+  -
+    Identifier: '83c21090-bd19-4b54-ab6b-d999c251edcf'
+    Title: 'Cases Recorded For Selected Major Offences'
+    Url: 'https://storage.data.gov.sg/cases-recorded-for-selected-major-offences/resources/cases-recorded-for-selected-major-offences-2021-03-05T17-14-27Z.csv'
+    Format: 'CSV'
+    Coverage: '2011-01-01 to 2020-12-31'
+    Last Updated: '2021-03-05T17:14:27.776972'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'level_1'
+        Title: 'Total'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'level_2'
+        Title: 'Offence'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'value'
+        Title: 'Number'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'case'
