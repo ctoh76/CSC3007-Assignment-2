@@ -19,7 +19,7 @@
 
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src = "app2.js" defer></script>
+    <script src="app2.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         var data = {
@@ -30,14 +30,28 @@
             data: data,
             dataType: 'json',
             success: function (data) {
-                console.log(data.result.records)
+                // console.log(data.result.records)
                 //alert('Total results found: ' + data.result.total)
-                getResponse(data.result.records);
-            }
-        });
-        function getResponse(data){
-            
+                // getResponse(data.result.records);
+
+
+                const unique = [...new Set(data.result.records.map(item => item.year))];
+
+                for (year in unique) {
+                    y1 = unique[year];
+                    data[y1] = data.result.records.filter(relevantYear => {
+                        return relevantYear.year === y1
+                    })
+                }
+                // console.log(data)
+                for (item in data.result.records){
+                    console.log(data.result.records[item].level_2);
+                }
         }
+        });
+        // function getResponse(data){
+
+        // }
     </script>
 </body>
 
